@@ -1,10 +1,11 @@
 
 import 'package:flutter/material.dart';
 
+/// Attēlo kategorijas, kurās lietotājs var iesniegt ziņojumu.
 class ReportCategoryWidget extends StatelessWidget {
   const ReportCategoryWidget({super.key});
 
-  // Vienas kastītes izveidošana
+  /// Izveido vienu kategorijas elementu ar ikonu, nosaukumu un krāsu.
   Widget buildManaKastite(
       IconData icon, String teksts, Color color) {
     return Container(
@@ -31,6 +32,7 @@ class ReportCategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Ievieto kategoriju elementus kopīgā, horizontālā panelī.
     return Container(
       width: double.infinity,
       height: 130,
@@ -43,21 +45,25 @@ class ReportCategoryWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          // Kategorija ziņojumiem par zādzību.
           buildManaKastite(
             Icons.person,
             "Zādzība",
             Colors.red,
           ),
+          // Kategorija ziņojumiem par šaušanu.
           buildManaKastite(
             Icons.gps_fixed,
             "Šaušana",
             const Color.fromARGB(255, 223, 208, 3),
           ),
+          // Kategorija ziņojumiem par ugunsgrēku.
           buildManaKastite(
             Icons.local_fire_department,
             "Degšana",
             const Color.fromARGB(255, 241, 145, 42),
           ),
+          // Kategorija ziņojumiem, kas neatbilst pārējiem veidiem.
           buildManaKastite(
             Icons.more_horiz,
             "Cits",

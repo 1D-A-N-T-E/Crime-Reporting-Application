@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
+/// Parāda tuvākā ziņojuma kartīti ar atrašanās vietas informāciju.
 class NearbyAlertsSection extends StatelessWidget {
   const NearbyAlertsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Atstarpe atdala šo sadaļu no satura virs tās.
     return Padding(
       padding: EdgeInsetsGeometry.only(top: 25) ,
         child: Column(
       children: [
+        // Kartītē ir ietverta informācija par ziņojumu un tā attālumu.
         Container(
           height: 100,
           decoration: BoxDecoration(
@@ -17,6 +20,7 @@ class NearbyAlertsSection extends StatelessWidget {
           ),
           child: Row(
             children: [
+              // Ikona vizuāli apzīmē ziņojuma veidu.
               Padding(
                 padding: EdgeInsets.all(15),
                 child: Container(
@@ -33,8 +37,10 @@ class NearbyAlertsSection extends StatelessWidget {
                 ),
               ),
 
+              // Atdala ikonu no ziņojuma teksta.
               SizedBox(width: 15),
 
+              // Ziņojuma veids, adrese un publicēšanas laiks.
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -50,6 +56,7 @@ class NearbyAlertsSection extends StatelessWidget {
                   ],
                 ),
               ),
+              // Norāde un aptuvenais attālums līdz ziņojuma vietai.
 Expanded(
   child: Align(
     alignment: Alignment.center,

@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
 
+/// Izceļ svarīgu vai steidzamu paziņojumu sākumlapā.
 class ImportantNoticeWidget extends StatelessWidget {
   const ImportantNoticeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Sarkanā krāsa palīdz paziņojumam izcelties pārējā saturā.
     return Container(
       margin: const EdgeInsets.all(5),
       width: double.infinity,
@@ -19,7 +21,7 @@ class ImportantNoticeWidget extends StatelessWidget {
       child: Row(
         children: [
 
-          // Brīdinājuma ikona
+          // Ikona norāda, ka paziņojumam jāpievērš uzmanība.
           Expanded(
             flex: 1,
             child: Icon(
@@ -29,7 +31,7 @@ class ImportantNoticeWidget extends StatelessWidget {
             ),
           ),
 
-          // Tekstu kolonna
+          // Paziņojuma virsraksts un paskaidrojošais teksts.
           Expanded(
             flex: 4,
             child: Column(
@@ -66,7 +68,7 @@ class ImportantNoticeWidget extends StatelessWidget {
             ),
           ),
 
-          // Bultiņa
+          // Bultiņa norāda uz iespēju atvērt plašāku informāciju.
           Expanded(
             flex: 1,
             child: Icon(
