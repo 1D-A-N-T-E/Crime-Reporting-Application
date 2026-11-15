@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test1/features/profile/profile_screen.dart';
 
 import 'auth/login_screen.dart';
 import 'auth/register_screen.dart';
@@ -33,6 +34,10 @@ final GoRouter _router = GoRouter(
      GoRoute(
       path: '/splash',
       builder: (context, state) => const SplashScreen(),
+    ),
+         GoRoute(
+      path: '/profile',
+      builder: (context, state) => const ProfileScreen(),
     ),
   ],
 );

@@ -31,6 +31,9 @@ class AppNavigationBar extends StatelessWidget {
           case 3:
             context.go('/register');
             break;
+          case 4:
+            context.go('/profile');
+            break;
         }
       },
       // Ikonas un nosaukumi, kas redzami navigācijas joslā.
